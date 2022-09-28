@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 1.7s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 550ms infinite ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.bk {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    background-image: url(https://img.freepik.com/vetores-premium/paisagem-natural-da-montanha-em-estilo-cartoon-ilustracao-da-paisagem-plana_196702-52.jpg), url(https://img.freepik.com/vetores-premium/paisagem-natural-da-montanha-em-estilo-cartoon-ilustracao-da-paisagem-plana_196702-52.jpg);
+    background-size: cover;
+    background-repeat: repeat-x, repeat-x;
+    animation: bk-animation 30s infinite linear;
+}
+
+.chao {
+    position: relative;
+    width: 100%;
+    height:212px;
+    border-top:solid 10px #19061A;
+    background: linear-gradient(#FF5759 5%, #7C1746 20%, #19061A 60%);
+}
+
+@keyframes pipe-animation {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom:180px;
+    }
+
+    50% {
+        bottom:180px;
+    }
+
+    60% {
+        bottom:180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@keyframes bk-animation {
+    0% {
+        background-position: 600px;
+    }
+    
+    100% {
+        background-position: -506px;
+    }
+
+   
+    
+    
+}
